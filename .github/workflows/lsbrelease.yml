@@ -1,8 +1,15 @@
-name: lsbreleasetest
+name: testlsbrelease
+
 on:
   push:
+    branches: [ master ]
+
 jobs:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Run lsbrelease
-        run: apt-get install lsb-release
+    - uses: actions/checkout@v2
+
+    - name: lsbreleasetest
+      run: apt-get install lsb-release
