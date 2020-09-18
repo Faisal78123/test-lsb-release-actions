@@ -1,0 +1,8 @@
+name: lsbreleasetest
+on:
+  push:
+jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run lsbrelease
+        run: apt-get install lsb-release
